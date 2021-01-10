@@ -1,0 +1,114 @@
+.carousel {
+  margin: 20px;
+}
+.carousel__view {
+  width: calc(250px * 3);
+  height: 300px;
+  background: white;
+  box-shadow: 0 1px 8px #888888;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #222428;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 3px 3px 3px 3px;
+  text-decoration: none;
+}
+
+.prev:hover,
+.next:hover {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+.launch-data-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s;
+  transform: translateX(0px);
+  list-style: none;
+  height: 300px;
+  display: flex;
+  background: #d8d8d8;
+}
+.launch-data-list__item {
+  align-items: flex-start;
+  text-align: center;
+  display: inline-flex;
+  flex: 1;
+}
+
+.launch-data {
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
+  background-color: white;
+  opacity: 0.75;
+}
+.launch-data span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.launch-data.active {
+  margin: 0;
+  opacity: 1;
+}
+
+.launch-data-image > img {
+  object-fit: cover;
+  height: 148px;
+  width: 148px;
+}
+
+.launch-data-details {
+  margin-top: 10px;
+  padding-left: 13px;
+  text-align: left;
+}
+
+.launch-data-details p {
+  font-size: 14px;
+}
+
+.launch-data-details ul li {
+  font-size: 14px;
+}
+
+.launch-data__heading {
+  color: rgb(132, 132, 235);
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 50px;
+}
