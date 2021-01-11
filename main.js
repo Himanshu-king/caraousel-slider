@@ -12,7 +12,6 @@ export function createCaraousel(carousel) {
   const launches$ = carousel.querySelectorAll(".launch-data");
 
   let activeElem = 1;
-  launches$[activeElem].style.border = "solid black 2px";
   launches$[activeElem].className += " active";
   launchDataList.style.transform = "translateX(0px)";
 
@@ -34,7 +33,6 @@ export function createCaraousel(carousel) {
       moveListData();
       clearStyles();
       activeElem++;
-      launches$[activeElem].style.border = "solid black 2px";
       launches$[activeElem].className += " active";
     }
   };
@@ -44,7 +42,6 @@ export function createCaraousel(carousel) {
       moveListData();
       clearStyles();
       activeElem--;
-      launches$[activeElem].style.border = "solid black 2px";
       launches$[activeElem].className += " active";
     }
   };
@@ -55,7 +52,6 @@ export function createCaraousel(carousel) {
 
   const clearStyles = () => {
     for (let i = 0; i < launches$.length; i++) {
-      launches$[i].style.border = "none";
       launches$[i].className = launches$[i].className.replace(" active", "");
     }
   };
